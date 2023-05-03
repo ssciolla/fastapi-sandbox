@@ -3,7 +3,7 @@ import logging
 from fastapi import Depends, FastAPI, HTTPException
 from sqlmodel import Session, select
 
-from models import (
+from cars.models import (
     Brand, BrandCreate, BrandRead, BrandReadWithCars,
     Car, CarCreate, CarRead, CarReadWithBrand,
     ENGINE, set_up_database

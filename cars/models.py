@@ -1,3 +1,4 @@
+import os
 from enum import Enum
 
 from typing import Optional
@@ -64,7 +65,8 @@ class BrandReadWithCars(BrandRead):
 
 # DB setup
 
-sqlite_file_name = 'cars.db'
+
+sqlite_file_name = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'cars.db')
 sqlite_url = f"sqlite:///{sqlite_file_name}"
 
 connect_args = {'check_same_thread': False}
